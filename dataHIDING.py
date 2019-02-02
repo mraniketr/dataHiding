@@ -9,8 +9,6 @@ def zunz(args):
     if(args==2):
         print("Unzipping")
         os.system("unzip final2.jpg")
- #root_dir = directory of your folder containing secret files
- #d='/home/aniket/Desktop/Test/Python/Python Project/image hiding/FINAL/DATA'
     else:
         root=Tk() #Tk window to hold the button:
         root.update()
