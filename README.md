@@ -7,20 +7,25 @@ A python code to hide any sort of data into an image.
 
 ## STEP 2:
 *Compile the code*
-  'python3 dataHIDING.py'
+  ```
+  python3 dataHIDING.py
+  ```
 
 ## STEP 3: Choose option 1 to encrypt data
-
+```
 1. Create classified image 
 2. Extract Data 
 
 1
 Encryption successful
-
+```
 *All the data inside the selected folder will be converted into a zip and merged with the .jpg*
-
+   ```
+  python3 dataHIDING.py
+  ```
 ## STEP 4: Choose optoion 2 to decrypt data
- 'python3 dataHIDING.py'
+
+  ```
 1. Create classified image 
 2. Extract Data 
 
@@ -30,5 +35,5 @@ warning [classified.jpg]:  1018280 extra bytes at beginning or within zipfile
   (attempting to process anyway)
   inflating: payload.txt             
 Extraction successful
-
+```
 *The jpg will be extracted into the current directory.*
