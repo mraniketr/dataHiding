@@ -1,42 +1,44 @@
-import os 															#to run system commands
-import shutil 			 										    #to make archive
+#to run system commands
+import os
+#to make archive
+import shutil
+#Filedialog for selection
 from tkinter import filedialog
 from tkinter import *
-import sys 															#to know the os for os specific commands
+#to distinguish between OS
+import sys
 
-def zunz(args):
-    if(args==2):													#Extraction
-        if(sys.platform=='win32'):
-            os.system('rename classified.jpg classified.zip')
-            os.system('unzip classified.zip')
-        else:
-            os.system("unzip classified.jpg") 
-       	print("Extraction successful")
-   
-    elif(args==1):													#Encryption
+#function to unzip the encrypted image with classified information
+def fuzip():
+	if(sys.platform=='win32'):
+		os.system('rename classified.jpg classified.zip')
+		os.system('unzip classified.zip')
+	else:
+		os.system("unzip classified.jpg") 
+	print("Extraction successful")
 
-   
-        root=Tk()
-        root.update()
-   																	#Creating Zip
-        shutil.make_archive('final','zip',root_dir=filedialog.askdirectory(title = "Open directory containg your files"),base_dir=None)
-        root.destroy()
+#function to create zip and the encrypted image with classified information   
+def fzip():
+	root=Tk()
+	root.update()
+	shutil.make_archive('final','zip',root_dir=filedialog.askdirectory(title = "Open directory containg your files"),base_dir=None)
+	root.destroy()
 
-        if(sys.platform=='win32'):			
-            os.system("copy /b final.jpg+final.zip classified.jpg")		#to create encrypted image
-            os.system("del final.zip")								#delete the .zip file
-        else:
-            os.system("cat final.jpg final.zip > classified.jpg") 		#to create encrypted image
-            os.system("rm final.zip") 								#delete the .zip file 
-       
-        print("Encryption successful")
-
-    else:
-        print("Invalid Input")
-                
+	if(sys.platform=='win32'):
+		isrc=filedialog.askopenfilename()
+		os.rename(isrc,'final.jpg')
+		os.system("copy /b final.jpg+final.zip classified.jpg")
+		os.system("del final.zip")
+	
+	else:
+		isrc=filedialog.askopenfilename()
+		os.rename(isrc,'final.jpg')
+		os.system("cat final.jpg final.zip > classified.jpg")
+		os.system("rm final.zip")
+	print("Encryption successful")                
 
 print("\n1. Create classified image \n2. Extract Data \n") 
 if(int(input())==1):
-    zunz(1)
+    fzip()
 else:
-    zunz(2)
+    fuzip()
