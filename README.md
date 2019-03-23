@@ -4,17 +4,17 @@ A python application to hide any sort of data into an image.
 ## Encryption
 
 ### STEP 1:
-Put an image named *final.jpg* in the current working directory.
 
-### STEP 2:
 Run the application:
 
 ```
 python3 dataHIDING.py
 ```
 
-### STEP 3:
+### STEP 2:
 Choose option 1 to encrypt data:
+choose the directory first
+choose the cover image second
 
 ```
 1. Create classified image 
