@@ -1,17 +1,21 @@
 # dataHiding
-A python code to hide any sort of data into an image.
+A python application to hide any sort of data into an image.
 
-##STEP 1:
+## Encryption
 
-*Put an image named final.jpg in the current working directory.*
+### STEP 1:
+Put an image named *final.jpg* in the current working directory.
 
-## STEP 2:
-*Compile the code*
-  ```
-  python3 dataHIDING.py
-  ```
+### STEP 2:
+Run the application:
 
-## STEP 3: Choose option 1 to encrypt data
+```
+python3 dataHIDING.py
+```
+
+### STEP 3:
+Choose option 1 to encrypt data:
+
 ```
 1. Create classified image 
 2. Extract Data 
@@ -19,13 +23,22 @@ A python code to hide any sort of data into an image.
 1
 Encryption successful
 ```
-*All the data inside the selected folder will be converted into a zip and merged with the .jpg*
-   ```
-  python3 dataHIDING.py
-  ```
-## STEP 4: Choose optoion 2 to decrypt data
 
-  ```
+*All the data inside the selected folder will be compressed into a zip file and merged with final.jpg.*
+  
+## Decryption
+
+### STEP 1:
+Run the application:
+
+```
+python3 dataHIDING.py
+```
+  
+### STEP 2:
+Choose option 2 to decrypt data:
+
+```
 1. Create classified image 
 2. Extract Data 
 
